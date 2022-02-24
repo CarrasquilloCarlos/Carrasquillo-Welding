@@ -1,0 +1,52 @@
+.nav{
+    font-family: 'Ultra', serif;   /* utilizo el font Ultra en la navegacion*/
+    text-decoration: solid;
+
+        
+}
+@media only screen and (max-width: 500px){        /* Cuando el width es de 500px o menos cambia el font */
+    .nav {                                            
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 18px;
+        font-size: large;
+    }
+}
+form{                            /*Coloco la forma en el centro*/
+    text-align: center;
+}    
+
+@media only screen and (max-width: 500px) {          /* Cuando el width es de 500px o menor se desaparece el logo*/
+    .col-md-4 {
+        display: none;
+}
+ 
+}
+h2, h3, p, label  {                   /* Utilizo el font Ultra en los siguientes tags*/
+    font-family: 'Ultra', serif;
+    padding: 5px;
+}
+
+@media only screen and (max-width:700px) {      /* Cuando la pantalla es de 700px o menor el logo inferior desaparece*/
+    .col-md-1 {
+        display: none;
+    }
+}
+body{                               /* con este css controlo el ciclo de colores en el background*/
+    background: linear-gradient(to left, rgb(174, 174, 238), rgb(240, 131, 131), yellow);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 20s ease infinite ;
+}
+    @keyframes BackgroundGradient {
+       0% {background-position: 0% 50%;}
+       50% {background-position: 100% 50%;}
+       100% {background-position: 0% 100%;} 
+    }
+
+#foto1{     /* coloco la foto en el centro y con un borde doble*/
+     text-align: center;
+     border-style: double;
+}  
+
+   
+
+

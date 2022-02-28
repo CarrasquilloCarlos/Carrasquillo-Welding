@@ -45,6 +45,7 @@ body{                               /* con este css controlo el ciclo de colores
 #foto1{     /* coloco la foto en el centro y con un borde doble*/
      text-align: center;
      border-style: double;
+     width: 500px;
 }  
 
    

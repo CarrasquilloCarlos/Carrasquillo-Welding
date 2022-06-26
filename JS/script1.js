@@ -22,18 +22,18 @@ function validatePhone(){
     var phone = document.getElementById('phone').value;
 
     if(phone.length == 0){
-        phoneError.innerHTML = "Se requiere numero de telefono";
+        phoneError.innerHTML = "Se requiere número de teléfono";
         return false;
     }
     if (phone.length !== 10){
-        phoneError.innerHTML = "Numero de telefono de 10 digitos";
+        phoneError.innerHTML = "Número de teléfono de 10 dígitos";
         return false;
     }
     if (!phone.match(/^[0-9]{10}$/)){
-        phoneError.innerHTML= "Se requiere numero de telefono";
+        phoneError.innerHTML= "Se requiere número de teléfono";
         return false;
     }
-    phoneError.innerHTML = 'Valido'
+    phoneError.innerHTML = 'Válido'
         return true;
 
 }
@@ -45,10 +45,10 @@ function validateEmail(){
         return false;
     }
     if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
-        emailError.innerHTML = "Email invalido"
+        emailError.innerHTML = "Email inválido"
         return false;
     }
-    emailError.innerHTML = "Valido";
+    emailError.innerHTML = "Válido";
     return true;
 
 }
@@ -62,7 +62,7 @@ function validateMessage(){
         return false;
     }
 
-    messageError.innerHTML = "Valido";
+    messageError.innerHTML = "Válido";
     return true;
 
 }

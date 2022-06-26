@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="SiteStyle/global.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet"/>       
         <title>Contacto</title>
-        <script src="script.js"></script>
+        
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -44,34 +44,35 @@
                 <br>
                     <form>  <!--Creo una forma-->
                         <br>
-                        <label for="fname">Nombre</label>
+                        <label for="fname">Nombre completo</label>
                         <br>
-                        <input type="text" id="fname" name="firstname" placeholder="Nombre" required>
-                        <br>
-                        <label for="lname">Apellido</label>
-                        <br>
-                        <input type="text" id="lname" name="lastname" placeholder="Apellido" required>
-                        <br>
+                        <input type="text" id="name" name="firstname" placeholder="Juan del Pueblo" onkeyup="validateName()">
+                        <span id="name-error">Se requiere nombre completo</span>
+                        <br>                                               
                         <label>Email</label>
                         <br>
-                        <input type="text" id="email" name="email" placeholder:"ejemplo@gmail.com">
+                        <input type="text" id="email" name="email" placeholder="ejemplo@gmail.com" onkeyup="validateEmail()">
+                        <span id="email-error">Se requiere email</span>
                         <br>
                         <label>Telephone</label>
                         <br>
-                        <input type="number" id="phone" name="phone" placeholder:"(000)111-2222">
+                        <input type="number" id="phone" name="phone" placeholder="1234567890" onkeyup="validatePhone()">
+                        <span id="phone-error">Se requiere teléfono</span>
                         <br>
                         <label for="subject">Comentario ó Pregunta</label>
                         <br>
-                        <textarea id="subject" name="subject" placeholder="Escriba aquí" style="height: 200px;"></textarea>
+                        <textarea id="subject" name="subject" placeholder="Escriba aquí" style="height: 200px;" onkeyup="validateMessage()"></textarea>
+                        <span id="message-error">Se requiere mensaje</span>
                         <br>
-                        <input type="submit" value="Enviar">
+                        <button onclick="return validateForm()">Submit</button>
+                        <span id="submitError"></span>
                     </form>
                 </div>
             </div>
             <br>
             <br>
             <br>
-
+            <script src="/js/script1.js"></script>
             <footer class="mt-auto">
                 <div class="row">
                     <div class="col-md-1">
@@ -90,6 +91,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>    
         
-    
+        
     </body>
 </html>
